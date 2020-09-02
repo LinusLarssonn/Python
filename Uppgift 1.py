@@ -38,7 +38,7 @@ def sockerkaka(antal):
     print("Den totala tidsåtgången blir", totalTid, "minuter.")
     print("")
 
-sockerkaka(4)
+sockerkaka(3)
 
 
 
