@@ -7,7 +7,7 @@ enhet = ["g", "ml", "st", "dl", "tsk", "tsk", "dl", "g", "dl"]
 def recept(antal):
     i = 0
 
-    for y in range(i, len(mängdDelat4)):
+    for i in range(i, len(mängdDelat4)):
         mängdDelat4[i] = mängdDelat4[i] * antal
         if i == 0:
             print("")
@@ -38,7 +38,7 @@ def sockerkaka(antal):
     print("Den totala tidsåtgången blir", totalTid, "minuter.")
     print("")
 
-sockerkaka(3)
+sockerkaka(9999999999999)
 
 
 
