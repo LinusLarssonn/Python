@@ -1,4 +1,8 @@
-ord = [("Båt", "En flytande manick"), ("Bil", "En rullande kub"),("Flygplan", "En obiologisk fågel")]
+ord = {}
+ord['Lampa'] = "Lysande föremål"
+ord['Flygplan'] = "Flygande plåtpork"
+ord['Bil'] = "Rullande plåtpork"
+
 run = True
 
 while run:
@@ -8,29 +12,26 @@ while run:
     x1 = int(input())
 
     if(x1==1):
-        add = False
         print("Vilket ord vill du lägga till?")
         x = input()
         print("Hur beskriver du det ordet?")
         x2 = input()
-        for r in range(0, len(ord)):
-            if x in ord[r][0]:
-                print("Det här ordet finns redan.")
-                break
-            else:
-                add = True
-        if add:
-            ord.append(tuple([x, x2]))
+        if x in ord.keys():
+            print("Ordet finns redan")
+        else: 
+             ord[x] = x2
 
     elif(x1==2):
-        y = 0
-        print()
         print("Vilket ord vill du ha beskrivet?")
-        for y1 in range(0, len(ord)):
-            y += 1
-            print(y, ord[y1][0])
-        x = int(input())
-        print(ord[x-1][1])
+        for key, value in ord.items():
+            print(key)
+        x = input()
+        if x in ord:
+            print(ord[x])
+        else:
+            print("Det ordet finns ej")
+            continue
+        
 
     elif(x1==3):
         print("Program avslutas...")

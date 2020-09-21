@@ -15,11 +15,13 @@ while run:
     if(x1==1):
         print("Vilket ord vill du lägga till?")
         x = input()
-        ord.append(x)
         print("Hur beskriver du det ordet?")
-        x = input()
-        beskrivning.append(x)
-
+        x2 = input()
+        if x in ord:
+            print("Det här ordet finns redan")
+        else:
+            ord.append(x)
+            beskrivning.append(x2)
 
     elif(x1==2):
         print("Vilket ord vill du kolla upp?")
