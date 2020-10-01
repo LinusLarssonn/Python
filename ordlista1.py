@@ -4,8 +4,27 @@ run = True
 ord = ["Flygplan", "Båt", "Bil"]
 beskrivning = ["Flygande plåtburk", "Flytande artefakt", "Rullande kub"]
 
-while run:
+def wordAdd():
+    print("Vilket ord vill du lägga till?")
+    x = input()
+    print("Hur beskriver du det ordet?")
+    x2 = input()
+    if x in ord:
+        print("Det här ordet finns redan")
+    else:
+        ord.append(x)
+        beskrivning.append(x2)
 
+def searchWord():
+    print("Vilket ord vill du kolla upp?")
+    y = 0
+    for x in ord:
+        y += 1
+        print(y, x)
+    x = input()
+    print(beskrivning[x-1])
+
+while run:
 
     print()
     print("Välj vad du vill göra.\n 1. Lägg till ord i listan.\n 2. Kolla upp ord i listan,\n 3. Stäng av programmet")
@@ -13,24 +32,10 @@ while run:
     x1 = int(input())
 
     if(x1==1):
-        print("Vilket ord vill du lägga till?")
-        x = input()
-        print("Hur beskriver du det ordet?")
-        x2 = input()
-        if x in ord:
-            print("Det här ordet finns redan")
-        else:
-            ord.append(x)
-            beskrivning.append(x2)
+        wordAdd()
 
     elif(x1==2):
-        print("Vilket ord vill du kolla upp?")
-        y = 0
-        for x in ord:
-            y += 1
-            print(y, x)
-        x = int(input())
-        print(beskrivning[x-1])
+        searchWord()
 
     elif(x1==3):
         print("Program avslutas...")
